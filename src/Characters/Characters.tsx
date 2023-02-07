@@ -36,14 +36,12 @@ import styles from './Characters.module.css'
     results: InfoAboutCharacter[];
   };
 
-const getAllCharacters = async (keys: readonly unknown[]  | string[] | any) => {
-//  console.log(keys);
- console.log(`https://rickandmortyapi.com/api/character/?page=${keys[1].page}`);
-
-
-
- //@ts-ignore
-  const { data } = await axios.get(`https://rickandmortyapi.com/api/character/?page=${keys[1].page}`)
+   //@ts-ignore
+const getAllCharacters = async (keys:any) => {
+console.log(keys);
+console.log(keys[1]);
+ console.log(`https://rickandmortyapi.com/api/character?page=${keys[1]}`);
+  const { data } = await axios.get(`https://rickandmortyapi.com/api/character?page=5`)
   return data;
 }
 
@@ -51,17 +49,13 @@ const Characters = () => {
   let [searchParams, setSearchParams] = useSearchParams({page: '1'})
   const { data, isLoading } = useQuery<Char>({
   queryKey: ["allCharacters", {page: searchParams.get('page')}],
-  //@ts-ignore
   queryFn: (queryKey) => getAllCharacters({queryKey})
-
   })
-
 
   if (isLoading) {
     return <div>'Loading ... '</div>
   }
- 
-  // ja dati netiek iegūti, redzēsim error
+
   if (!data) {
     throw Error("Something went wrong!")
   }
@@ -74,7 +68,7 @@ const Characters = () => {
         <h1 className={styles.main_characters_header}>All Rick And Morty Characters</h1>
         <div className={styles.all_characters}>
             {characters.map(({id, image, name, status}) => (
-              <Link to={`/character/${id}`} key={id}>
+              <Link to={`/character/${id}`} key={id} className={styles.all_characters__one_card}>
               <div 
                 key={id} 
                 className={styles.all_characters__one_card}

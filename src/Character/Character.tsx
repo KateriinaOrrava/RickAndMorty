@@ -38,19 +38,19 @@ const Character= () => {
                 </div>
                 <div className={styles.single_char_info}>
                     <div>
-                    <p className={styles.single_char_info}>LOCATION: {data.location.name}</p>
+                    <p className={styles.single_char_info__p}>LOCATION: {data.location.name}</p>
                     </div>
                     <div>
-                    <p>SPECIES: {data.species}</p>
+                    <p className={styles.single_char_info__p}>SPECIES: {data.species}</p>
                     </div>         
                     <div>
-                    <p>FROM: {data.origin.name}</p>
+                    <p className={styles.single_char_info__p}>FROM: {data.origin.name}</p>
                     </div>
                     <div>
-                    <p>STATUS: {data.status}</p>
+                    <p className={styles.single_char_info__p}>STATUS: {data.status}</p>
                     </div> 
                     <div>
-                    <p>CREATED: {data.created}</p>
+                    <p className={styles.single_char_info__p}>CREATED: {data.created}</p>
                     </div>
                 </div>
             </div>

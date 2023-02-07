@@ -1,13 +1,13 @@
 .all_characters{
     display:grid;
     grid-template-columns: repeat(5,1fr);
-    gap:20px;
+    gap:10px;
 }
 .main_characters_header{
     margin-top: 80px;
     color:#e5eef9;
 }
-.all_characters__one_card{
+.all_characters__one_card {
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -15,9 +15,12 @@
     color:white;
     border-radius: 50% 50% 5% 5%;
 }
-
+img {
+    width: 100px;;
+}
 .all_characters__one_card:hover {
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+height: 10%;
 }
 .link_to_char{
 color:white;

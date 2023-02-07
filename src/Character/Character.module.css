@@ -11,6 +11,8 @@
     justify-content: space-between;
     border-radius: 5px;
     transform: 5 ease;
+    max-height: 30%;
+    margin-top:50px;
 }
 
 .single_character:hover{
@@ -22,4 +24,7 @@ border-radius: 5%;
 }
 .all_characters__one_card p a{
     color:white
+}
+.single_char_info__p{
+    padding:0px;
 }
