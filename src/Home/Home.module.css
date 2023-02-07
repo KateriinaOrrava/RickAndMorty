@@ -1,0 +1,11 @@
+
+.pageHeader {
+    background-color: transparent;
+    }
+body {
+        background-image: url(https://www.pixelstalk.net/wp-content/uploads/images1/Dark-Light-Rick-and-Morty-Wallpaper.png);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+       /* background-color:black; */
+    }

@@ -1,0 +1,25 @@
+
+
+.single_character{
+    background-color: rgb(229, 238, 249, 0.6);
+    padding:5px;
+}
+.single_char{
+    display:flex;
+    width:100%;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    transform: 5 ease;
+}
+
+.single_character:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding:20px;
+}
+.single_char_img{
+border-radius: 5%;
+}
+.all_characters__one_card p a{
+    color:white
+}
